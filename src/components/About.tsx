@@ -27,7 +27,7 @@ const About = () => {
           <div className={`order-1 md:order-2 text-center transition-all duration-700 ${isVisible ? 'animate-fade-in-right' : 'opacity-0'}`}>
           <div className="relative inline-block">
             <img 
-              src="/assets/profile.png"
+              src={`${import.meta.env.BASE_URL}/assets/profile.png`}
               alt="Smiling young woman looking at the camera"
               className="w-full h-auto md:w-80 md:h-80 rounded-full object-cover mx-auto shadow-card transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
             />

@@ -33,7 +33,7 @@ const Journey = () => {
         {/* RIGHT: IMAGE */}
         <div className="flex justify-center">
           <img
-            src="/assets/school.jpg"
+            src={`${import.meta.env.BASE_URL}assets/school.jpg`}
             alt="Image by Alison Updyke from pixabay"
             className="w-full max-w-lg h-[450px] rounded-xl shadow-lg object-cover transition-transform duration-300 hover:scale-105"
           />
