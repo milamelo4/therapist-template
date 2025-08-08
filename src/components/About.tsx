@@ -7,7 +7,7 @@ const About = () => {
     <section id="about" className="py-10 sm:py-20 px-4 bg-gradient-section min-h-[100svh] md:min-h-screen" ref={ref}>
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-2 gap-12 items-end">
-          <div className={`transition-all duration-700 transform-gpu will-change-transform will-change-opacity ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
+          <div className={`order-2 md:order-1 transition-all duration-700 ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
             <h2 className="font-heading text-3xl md:text-5xl font-bold text-primary mb-6">
               Evelyn Bloom, LPC
             </h2>
