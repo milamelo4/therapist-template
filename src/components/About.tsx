@@ -4,10 +4,12 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const About = () => {
   const { ref, isVisible } = useScrollAnimation();
   return (
-    <section id="about" className="py-10 sm:py-20 px-4 bg-gradient-section min-h-screen" ref={ref}>
+    <section id="about" className="py-10 sm:py-20 px-4 bg-gradient-section min-h-screen transition-all duration-700 ${
+          isVisible ? 'animate-fade-in' : 'opacity-0 translate-y-10'
+        }`}" ref={ref}>
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-2 gap-12 items-end">
-          <div className={`transition-all duration-700 transform-gpu will-change-transform will-change-opacity ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
+          <div>
             <h2 className="font-heading text-3xl md:text-5xl font-bold text-primary mb-6">
               Evelyn Bloom, LPC
             </h2>
