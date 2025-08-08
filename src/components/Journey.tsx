@@ -1,14 +1,17 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Journey = () => {
-  const { ref, isVisible } = useScrollAnimation();
+  const { ref, isVisible } = useScrollAnimation(0.15);
 
   return (
-    <section id="journey" className="py-10 sm:py-20 px-6 bg-background min-h-[100svh] md:min-h-screen"
-      ref={ref}>
+    <section id="journey" className="py-10 sm:py-20 px-6 bg-background "
+      >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* LEFT: TEXT */}
-        <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
+        <div ref={ref}
+          className={`text-center mb-12 transition-opacity transition-transform duration-700 ease-out 
+            ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+        >
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-6">My Journey</h2>
 
           <div className="space-y-5 text-muted-foreground text-lg leading-relaxed text-left">
