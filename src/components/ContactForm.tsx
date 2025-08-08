@@ -37,7 +37,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-10 sm:py-20 px-4 bg-background" ref={ref}>
+    <section id="contact" className="py-10 sm:py-20 px-4 bg-background min-h-[100svh] md:min-h-screen" ref={ref}>
       <div className="container mx-auto max-w-6xl">
         <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-6">

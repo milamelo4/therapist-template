@@ -4,7 +4,7 @@ const Journey = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="journey" className="py-10 sm:py-20 px-6 bg-background"
+    <section id="journey" className="py-10 sm:py-20 px-6 bg-background min-h-[100svh] md:min-h-screen"
       ref={ref}>
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* LEFT: TEXT */}

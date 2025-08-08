@@ -4,7 +4,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const Testimonial = () => {
   const { ref, isVisible } = useScrollAnimation();
   return (
-    <section className="py-10 sm:py-20 px-4 bg-gradient-section" ref={ref}>
+    <section className="py-10 sm:py-20 px-4 bg-gradient-section min-h-[100svh] md:min-h-screen" ref={ref}>
       <div className="container mx-auto max-w-4xl text-center">
         <div className={`bg-card p-8 md:p-12 rounded-lg shadow-card hover:shadow-lg transition-all duration-500 hover:scale-105 ${
           isVisible ? 'animate-scale-in' : 'opacity-0'

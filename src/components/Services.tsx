@@ -25,7 +25,7 @@ const Services = () => {
 ];
 
    return (
-    <section id="services" className="py-10 sm:py-20 px-4 bg-background min-h-screen" ref={ref}>
+    <section id="services" className="py-10 sm:py-20 px-4 bg-background min-h-[100svh] md:min-h-screen" ref={ref}>
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
         <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
