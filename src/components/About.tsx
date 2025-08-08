@@ -4,9 +4,12 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const About = () => {
   const { ref, isVisible } = useScrollAnimation();
   return (
-    <section id="about" className="py-10 sm:py-20 px-4 bg-gradient-section min-h-screen transition-all duration-700 ${
+    <section id="about" 
+    ref={ref}
+    className={`py-10 sm:py-20 bg-gradient-to-b from-background to-muted/20 transition-all duration-700 ${
           isVisible ? 'animate-fade-in' : 'opacity-0 translate-y-10'
-        }`}" ref={ref}>
+        }`} 
+    >
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-2 gap-12 items-end">
           <div>
@@ -26,7 +29,7 @@ const About = () => {
 
             </div>
           </div>
-          <div className={`order-1 md:order-2 text-center transition-all duration-700 ${isVisible ? 'animate-fade-in-right' : 'opacity-0'}`}>
+          <div >
           <div className="relative inline-block">
             <img 
               src={`${import.meta.env.BASE_URL}/assets/profile.png`}
