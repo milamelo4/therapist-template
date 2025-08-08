@@ -24,9 +24,10 @@ const Services = () => {
   },
 ];
 
-  return (
+   return (
     <section id="services" className="py-10 sm:py-20 px-4 bg-background min-h-screen" ref={ref}>
       <div className="container mx-auto max-w-6xl">
+        {/* Header */}
         <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-6">
             Services Offered
@@ -35,15 +36,21 @@ const Services = () => {
             A humanized and personalized approach for each moment of your journey
           </p>
         </div>
-        
+
+        {/* Grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div 
+            <div
               key={index}
-              className={` border border-lavender-light bg-card p-8 rounded-lg shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 hover:scale-105 text-center ${
-                isVisible ? 'animate-fade-in-up' : 'opacity-0'
-              }`}
+              className={`border border-lavender-light bg-card p-8 rounded-lg shadow-soft hover:shadow-card 
+                          transition-all duration-300 hover:-translate-y-1 hover:scale-105 text-center
+                          ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}
+                          transform-gpu will-change-transform will-change-opacity [backface-visibility:hidden]`}
               style={{ animationDelay: `${index * 0.2}s` }}
+              onAnimationEnd={(e) => {
+                // Stop the animation so :hover transforms can take over
+                (e.currentTarget as HTMLElement).style.animation = 'none';
+              }}
             >
               <div className="w-16 h-16 bg-lavender-muted rounded-full flex items-center justify-center mx-auto mb-6 hover:bg-lavender-light transition-colors duration-300">
                 <service.icon className="w-8 h-8 text-lavender" />

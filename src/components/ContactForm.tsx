@@ -49,7 +49,7 @@ const ContactForm = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
-          <div className={`transition-all duration-700 ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
+          <div >
             <h3 className="font-heading text-2xl font-semibold text-text-calm mb-6">
               Contact Information
             </h3>
@@ -88,7 +88,7 @@ const ContactForm = () => {
             </div>
           </div>
 
-          <div className={`transition-all duration-700 ${isVisible ? 'animate-fade-in-right' : 'opacity-0'}`}>
+          <div>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Label htmlFor="name" className="text-text-calm font-medium">

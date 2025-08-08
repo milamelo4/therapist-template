@@ -11,23 +11,41 @@ const Header = () => {
 const sections = ["about", "journey", "services", "contact"];
 
 useEffect(() => {
+  const sections = ["about", "journey", "services", "contact"];
+  const activeRef = { current: "about" as string };
+  let ticking = false;
+
   const handleScroll = () => {
-    let current = "about";
-    sections.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) {
+    if (ticking) return;
+    ticking = true;
+
+    requestAnimationFrame(() => {
+      let next = activeRef.current;
+      for (const id of sections) {
+        const el = document.getElementById(id);
+        if (!el) continue;
         const rect = el.getBoundingClientRect();
         if (rect.top <= 100 && rect.bottom >= 100) {
-          current = id;
+          next = id;
+          break;
         }
       }
+      if (next !== activeRef.current) {
+        activeRef.current = next;
+        setActiveSection(next); // only updates when it changes
+      }
+      ticking = false;
     });
-    setActiveSection(current);
   };
 
-  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  // run once to set initial state
+  handleScroll();
+
   return () => window.removeEventListener("scroll", handleScroll);
 }, []);
+
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
@@ -35,7 +53,8 @@ useEffect(() => {
       <div className="container mx-auto max-w-5xl text-center">
         <div className="mb-8 animate-fade-in">          
         </div>
-          <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold animate-fade-in-up text-center">
+          <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold 
+               animate-fade-in-up transform-gpu will-change-transform will-change-opacity text-center">
             <span className="block mb-2 pt-2">Psychology & Psychoanalysis</span>
             <span className="block text-primary flex items-center justify-center gap-2">
                 <p className="animate-pulse text-gradient-text leading-relaxed">for You</p>
@@ -140,14 +159,16 @@ useEffect(() => {
             </span>
           </h1>
 
-        <p className="text-lg md:text-xl lg:text-2xl mb-8 opacity-90 font-light animate-fade-in-up [animation-delay:0.2s]">
+        <p className="text-lg md:text-xl lg:text-2xl mb-8 opacity-90 font-light 
+              ">
           Compassion, professionalism, and commitment in every session.
         </p>
         <Button 
           onClick={handleScheduleClick}
           size="lg"
-          className="bg-primary-foreground text-primary hover:bg-secondary-foreground/80 hover:text-secondary px-8 py-3 text-lg font-medium shadow-soft transition-all duration-300 hover:shadow-card hover:scale-105 animate-scale-in [animation-delay:0.4s]"
-        >
+          className="bg-primary-foreground text-primary hover:bg-secondary-foreground/80 hover:text-secondary 
+             px-8 py-3 text-lg font-medium shadow-soft transition-all duration-300 hover:shadow-card hover:scale-105 
+              [animation-delay:0.4s] transform-gpu will-change-transform will-change-opacity">
           Book a Session
         </Button>
         
