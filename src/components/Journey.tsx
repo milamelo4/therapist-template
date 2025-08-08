@@ -9,12 +9,12 @@ const Journey = () => {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* LEFT: TEXT */}
         <div ref={ref}
-          className={`text-center mb-12 transition-opacity transition-transform duration-700 ease-out 
+          className={`text-left mb-12 transition-opacity transition-transform duration-700 ease-out 
             ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
         >
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-6">My Journey</h2>
 
-          <div className="space-y-5 text-muted-foreground text-lg leading-relaxed text-left">
+          <div className="space-y-5 text-muted-foreground leading-relaxed text-left">
             <p>
               My professional journey began at the Federal University of Minas Gerais (UFMG), where I received a high-quality education with a strong balance of theory and practice. This foundation allowed me to freely explore and develop my own style as a psychoanalyst.
             </p>
