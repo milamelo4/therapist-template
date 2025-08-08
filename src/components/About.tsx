@@ -48,7 +48,8 @@ const About = () => {
 
           {/* Image */}
           <div
-            className='animate-fade-in-up transform-gpu will-change-transform will-change-opacity [backface-visibility:hidden]'
+            className={`transition-opacity transition-transform duration-700 ease-out 
+            ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}  
           
           >
             <div className="relative inline-block">

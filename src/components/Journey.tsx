@@ -4,12 +4,11 @@ const Journey = () => {
   const { ref, isVisible } = useScrollAnimation(0.15);
 
   return (
-    <section id="journey" className="py-10 sm:py-20 px-6 bg-background "
-      >
+    <section id="journey" className="py-10 sm:py-20 px-4 bg-background min-h-[100svh] md:min-h-screen">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* LEFT: TEXT */}
         <div ref={ref}
-          className={`text-left mb-12 transition-opacity transition-transform duration-700 ease-out 
+          className={`container mx-auto max-w-6xl text-left mb-12 sm:mb-0 transition-opacity transition-transform duration-700 ease-out 
             ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
         >
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-6">My Journey</h2>
