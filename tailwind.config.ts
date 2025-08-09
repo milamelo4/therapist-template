@@ -75,7 +75,9 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-section': 'var(--gradient-section)'
+				'gradient-section': 'var(--gradient-section)',
+				'gradient-section-dark': 'var(--gradient-section-dark)',
+				'gradient-text': 'var(--gradient-text)',
 			},
 			boxShadow: {
 				soft: 'var(--shadow-soft)',

@@ -8,7 +8,7 @@ const Journey = () => {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* LEFT: TEXT */}
         <div ref={ref}
-          className={`container mx-auto max-w-6xl text-left mb-12 sm:mb-0 transform-gpu will-change-transform will-change-opacity
+          className={`container mx-auto max-w-6xl text-left mb-8sm:mb-12 sm:mb-0 transform-gpu will-change-transform will-change-opacity
           transition-opacity transition-transform duration-700 ease-out
           ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
@@ -16,14 +16,17 @@ const Journey = () => {
 
           <div className="space-y-5 text-muted-foreground leading-relaxed text-left">
             <p>
-              My professional journey began at the Federal University of Minas Gerais (UFMG), where I received a high-quality education with a strong balance of theory and practice. This foundation allowed me to freely explore and develop my own style as a psychoanalyst.
+              My professional path began at the University of Washington, where I gained a strong academic foundation paired with hands-on clinical experience. This combination helped me develop a thoughtful, client-centered approach that blends structure with flexibility.
             </p>
+
             <p>
               What shaped me most was my natural curiosity about people's stories, my desire to understand them, and my sensitivity when listening. These personal qualities continue to guide my work today.
             </p>
+
             <p>
-              After completing my Psychology degree, I pursued a Master's at Universidad Kennedy in Buenos Aires, Argentina — a city known as a hub for psychoanalytic studies in Latin America. This immersive experience deeply impacted my career and transformed my clinical practice. Since then, this theoretical and clinical lens has been the foundation of my work.
-            </p>
+            After earning my degree in Psychology, I continued my education with a master’s program at New York University, where I focused on advanced psychotherapy methods. This immersive training shaped my perspective and became the cornerstone of my clinical approach, influencing how I work with clients today.
+          </p>
+
             <p>
               Today, I dedicate myself to clinical care for children, adolescents, and adults, offering a space where each story is heard with care and respect.
             </p>
@@ -34,7 +37,7 @@ const Journey = () => {
         </div>
 
         {/* RIGHT: IMAGE */}
-        <div className="flex justify-center">
+        <div className="flex justify-center container mx-auto max-w-6xl">
           <img
             src={`${import.meta.env.BASE_URL}assets/school.jpg`}
             alt="Image by Alison Updyke from pixabay"

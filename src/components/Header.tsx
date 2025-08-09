@@ -184,6 +184,10 @@ useEffect(() => {
     <li>
       <a href="#services" className={`transition-colors duration-300 ${activeSection === "services" ? "text-primary font-semibold" : "text-text-calm"}`}>Services</a>
     </li>
+        <li>
+      <a href="#testimonials" className={`transition-colors duration-300 ${activeSection === "testimonials" ? "text-primary font-semibold" : "text-text-calm"}`}>Testimonials</a>
+    </li>
+
     <li>
       <a href="#contact" className={`transition-colors duration-300 ${activeSection === "contact" ? "text-primary font-semibold" : "text-text-calm"}`}>Contact</a>
     </li>

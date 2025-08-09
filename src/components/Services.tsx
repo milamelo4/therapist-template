@@ -12,15 +12,15 @@ const Services = () => {
   },
   {
     icon: Globe,
-    title: "Online Therapy for Brazilians Abroad",
+    title: "Therapy for Individuals Living Abroad",
     description:
-      "Specialized support for Brazilians living outside the country, offering emotional guidance during cultural adaptation and the challenges of life abroad.",
+      "Support for those navigating life in a different country, offering guidance through cultural transitions, emotional adjustments, and the challenges of living overseas.",
   },
   {
     icon: User,
     title: "Personalized Care",
     description:
-      "Each session is thoughtfully tailored to the unique needs of each individual, respecting their pace and life story.",
+      "Each session is thoughtfully tailored to the unique needs of each individual, respecting their pace and life story. Our approach focuses on creating a safe space for self-discovery and transformation.",
   },
 ];
 
@@ -47,16 +47,13 @@ const Services = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
-              key={index}
+               key={index}
               className={`border border-lavender-light bg-card p-8 rounded-lg shadow-soft hover:shadow-card 
-                          transition-all duration-300 hover:-translate-y-1 hover:scale-105 text-center
-                          ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}
-                          transform-gpu will-change-transform will-change-opacity [backface-visibility:hidden]`}
-              style={{ animationDelay: `${index * 0.2}s` }}
-              onAnimationEnd={(e) => {
-                // Stop the animation so :hover transforms can take over
-                (e.currentTarget as HTMLElement).style.animation = 'none';
-              }}
+              text-center transform-gpu will-change-transform will-change-opacity [backface-visibility:hidden]
+              transition-opacity transition-transform duration-500 ease-out
+              ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}
+              hover:-translate-y-1 hover:scale-105`}
+              style={{ transitionDelay: `${index * 120}ms` }}
             >
               <div className="w-16 h-16 bg-lavender-muted rounded-full flex items-center justify-center mx-auto mb-6 hover:bg-lavender-light transition-colors duration-300">
                 <service.icon className="w-8 h-8 text-lavender" />

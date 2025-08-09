@@ -11,7 +11,7 @@ const About = () => {
         className={`py-10 sm:py-20 px-4 bg-gradient-section min-h-[100svh] md:min-h-screen text-left animate-fade-in-up duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
       >
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-end">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-20 items-end">
             {/* Text */}
             <div
             >
@@ -20,11 +20,9 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-text-soft leading-relaxed">
                 <p>
-                  I'm a psychologist and psychoanalyst with over 15 years of
-                  experience. I earned my degree from the Federal University of
-                  Minas Gerais (UFMG) and hold a master's degree from Universidad
-                  Kennedy in Argentina.
+                  I'm a psychologist and psychoanalyst with over 15 years of experience. I earned my degree from the University of Michigan and hold a master's degree from Columbia University in New York.
                 </p>
+
                 <p>
                   My approach combines sensitive listening with technical rigor,
                   creating a warm and safe space for self-discovery and

@@ -110,6 +110,7 @@ const ContactForm = () => {
                   required
                   className="mt-2 border-border focus:ring-lavender focus:border-lavender"
                   placeholder="Your full name"
+                  autoComplete="name"
                 />
               </div>
 
@@ -126,6 +127,7 @@ const ContactForm = () => {
                   required
                   className="mt-2 border-border focus:ring-lavender focus:border-lavender"
                   placeholder="your.email@exemple.com"
+                  autoComplete="email"
                 />
               </div>
 
@@ -142,6 +144,7 @@ const ContactForm = () => {
                   rows={5}
                   className="mt-2 border-border focus:ring-lavender focus:border-lavender"
                   placeholder="Tell me a bit about what you'd like to talk about..."
+                  autoComplete="on"
                 />
               </div>
 
