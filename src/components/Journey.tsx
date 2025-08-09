@@ -24,7 +24,7 @@ const Journey = () => {
             </p>
 
             <p>
-            After earning my degree in Psychology, I continued my education with a master’s program at New York University, where I focused on advanced psychotherapy methods. This immersive training shaped my perspective and became the cornerstone of my clinical approach, influencing how I work with clients today.
+            After earning my degree in Psychology, I continued my education with a master's program at New York University, where I focused on advanced psychotherapy methods. This immersive training shaped my perspective and became the cornerstone of my clinical approach, influencing how I work with clients today.
           </p>
 
             <p>
@@ -37,12 +37,15 @@ const Journey = () => {
         </div>
 
         {/* RIGHT: IMAGE */}
-        <div className="flex justify-center container mx-auto max-w-6xl">
+        <div className="flex flex-col items-center container mx-auto max-w-6xl">
           <img
             src={`${import.meta.env.BASE_URL}assets/school.jpg`}
             alt="Image by Alison Updyke from pixabay"
             className="w-full max-w-lg h-[450px] rounded-xl shadow-lg object-cover transition-transform duration-300 hover:scale-105"
           />
+          <p className="mt-3 text-sm text-muted-foreground italic">
+            University of Washington — where my professional journey began
+          </p>
         </div>
       </div>
     </section>
