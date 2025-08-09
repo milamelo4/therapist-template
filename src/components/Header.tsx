@@ -51,13 +51,12 @@ useEffect(() => {
   return (
     <header className="bg-gradient-hero text-primary-foreground py-12 px-4 overflow-hidden">
       <div className="container mx-auto max-w-5xl text-center">
-        <div className="mb-8 animate-fade-in">          
-        </div>
+        <div className="mb-4 animate-fade-in">         
           <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold 
                animate-fade-in-up transform-gpu will-change-transform will-change-opacity text-center">
-            <span className="block mb-2 pt-2">Psychology & Psychoanalysis</span>
+            <span className="block mb-2 pt-4 sm:pt-8">Psychology & Psychoanalysis</span>
             <span className="block text-primary flex items-center justify-center gap-2">
-                <p className="animate-pulse text-gradient-text leading-relaxed">for You</p>
+            <p className="animate-pulse text-gradient-text leading-relaxed">for You</p>
             
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
               width="300.000000pt" height="300.000000pt" viewBox="0 0 300.000000 300.000000"
@@ -158,7 +157,7 @@ useEffect(() => {
               </svg>
             </span>
           </h1>
-
+      </div>
         <p className="text-lg md:text-xl lg:text-2xl mb-8 opacity-90 font-light 
               ">
           Compassion, professionalism, and commitment in every session.
@@ -167,12 +166,12 @@ useEffect(() => {
           onClick={handleScheduleClick}
           size="lg"
           className="bg-primary-foreground text-primary hover:bg-secondary-foreground/80 hover:text-secondary 
-             px-8 py-3 text-lg font-medium shadow-soft transition-all duration-300 hover:shadow-card hover:scale-105 
+             px-8 py-3 text-lg font-medium shadow-soft transition-all duration-300 hover:shadow-card 
               [animation-delay:0.4s] transform-gpu will-change-transform will-change-opacity">
           Book a Session
-        </Button>
-        
+        </Button>        
       </div>
+      
      {/* Desktop Navigation (your original styles) */}
     <nav className="hidden md:block fixed top-3 left-1/2 -translate-x-1/2 bg-white/60 backdrop-blur-md rounded-full shadow-md px-6  py-2 z-50 border border-gray-200">
     <ul className="flex gap-10 text-text-calm font-medium text-sm md:text-base">

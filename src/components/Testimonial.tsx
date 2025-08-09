@@ -4,10 +4,11 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const Testimonial = () => {
   const { ref, isVisible } = useScrollAnimation();
   return (
-    <section className="py-10 sm:py-20 px-4 bg-gradient-section min-h-[100svh] md:min-h-screen">
+    <section className="py-10 sm:py-10 px-4 bg-gradient-section min-h-[100svh] md:min-h-screen">
       <div className="container mx-auto max-w-4xl text-center">
-        <div className={`bg-card p-8 md:p-12 rounded-lg shadow-card hover:shadow-lg transition-opacity transition-transform duration-700 ease-out 
-            ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+        <div className={`bg-card p-8 md:p-12 rounded-lg shadow-card hover:shadow-lg transform-gpu will-change-transform will-change-opacity
+          transition-opacity transition-transform duration-700 ease-out
+          ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           ref={ref}
         >
           <Quote className="w-12 h-12 text-lavender mx-auto mb-6 animate-pulse" />

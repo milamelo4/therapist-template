@@ -37,12 +37,16 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-10 sm:py-20 px-4 bg-background min-h-[100svh] md:min-h-screen">
+    <section id="contact"
+    ref={ref}
+     className={`py-10 sm:py-20 px-4 bg-background min-h-[100svh] md:min-h-screen text-left
+      transform-gpu will-change-transform will-change-opacity
+          transition-opacity transition-transform duration-700 ease-out
+          ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
+    `}>
       <div className="container mx-auto max-w-6xl">
-        <div ref={ref}
-          className={`text-center mb-12 transition-opacity transition-transform duration-700 ease-out 
-            ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-        >
+        <div className="mb-12 text-center">
+
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-6">
             Get in Touch
           </h2>

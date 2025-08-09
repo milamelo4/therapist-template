@@ -25,17 +25,20 @@ const Services = () => {
 ];
 
    return (
-    <section id="services" className="py-10 sm:py-20 px-4 bg-background min-h-[100svh] md:min-h-screen">
+    <section id="services"     
+    className={`py-10 sm:py-20 px-4 bg-background min-h-[100svh] md:min-h-screen`}>
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
-        <div ref={ref}
-          className={`text-center mb-12 transition-opacity transition-transform duration-700 ease-out 
-            ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+        <div 
+          ref={ref}
+          className={`text-center transform-gpu will-change-transform will-change-opacity
+          transition-opacity transition-transform duration-700 ease-out
+          ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-6">
             Services Offered
           </h2>
-          <p className="text-text-soft text-lg max-w-2xl mx-auto">
+          <p className="text-text-soft text-lg max-w-2xl mx-auto mb-12">
             A humanized and personalized approach for each moment of your journey
           </p>
         </div>
