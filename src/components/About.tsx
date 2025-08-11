@@ -20,7 +20,7 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-text-soft leading-relaxed">
                 <p>
-                  I'm a psychologist and psychoanalyst with over 15 years of experience. I earned my degree from the University of Michigan and hold a master's degree from Columbia University in New York.
+                  I'm a psychologist and psychoanalyst with over 30 years of experience. I earned my degree from the University of Michigan and hold a master's degree from Columbia University in New York.
                 </p>
 
                 <p>

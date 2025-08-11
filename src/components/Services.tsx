@@ -6,13 +6,13 @@ const Services = () => {
     const services = [
   {
     icon: Heart,
-    title: "Psychoanalysis for Self-Knowledge",
+    title: "Self-Knowledge",
     description:
       "A deep process of personal discovery through the analysis of unconscious content, promoting greater self-understanding and insight into relationships.",
   },
   {
     icon: Globe,
-    title: "Therapy for Individuals Living Abroad",
+    title: "Guidance Abroad",
     description:
       "Support for those navigating life in a different country, offering guidance through cultural transitions, emotional adjustments, and the challenges of living overseas.",
   },

@@ -36,7 +36,7 @@ const Testimonial = () => {
           {/* Avatar / name / meta */}
           <figcaption className="flex flex-col sm:flex-row items-center justify-center gap-3 text-text-soft">
             <User className="w-10 h-10 text-lavender rounded-full bg-lavender-muted p-1" />
-            <span className="font-medium">Ana Silva</span>
+            <span className="font-medium">Claire Smith</span>
             <span aria-hidden="true">•</span>
             <span className="text-sm">Remote client</span>
           </figcaption>

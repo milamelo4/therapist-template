@@ -8,10 +8,8 @@ const Header = () => {
   };
   const [activeSection, setActiveSection] = useState("about");
 
-const sections = ["about", "journey", "services", "contact"];
-
 useEffect(() => {
-  const sections = ["about", "journey", "services", "contact"];
+  const sections = ["about", "journey", "services", "testimonials", "contact"];
   const activeRef = { current: "about" as string };
   let ticking = false;
 
@@ -219,10 +217,16 @@ useEffect(() => {
       {isMobileMenuOpen && (
         <nav className="md:hidden fixed top-16 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-md shadow-lg rounded-xl px-6 py-4 text-center z-50 border border-gray-200 w-[90%] max-w-xs">
           <ul className="space-y-4 text-text-calm font-medium text-base">
-            <li><a href="#about" onClick={() => setIsMobileMenuOpen(false)} className={`block ${activeSection === "about" ? "text-primary font-semibold" : ""}`}>About</a></li>
-            <li><a href="#journey" onClick={() => setIsMobileMenuOpen(false)} className={`block ${activeSection === "journey" ? "text-primary font-semibold" : ""}`}>Journey</a></li>
-            <li><a href="#services" onClick={() => setIsMobileMenuOpen(false)} className={`block ${activeSection === "services" ? "text-primary font-semibold" : ""}`}>Services</a></li>
-            <li><a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className={`block ${activeSection === "contact" ? "text-primary font-semibold" : ""}`}>Contact</a></li>
+            <li><a href="#about" onClick={() => setIsMobileMenuOpen(false)} className={`block ${activeSection === "about" ? "text-primary font-semibold" : ""}`}>About</a>
+            </li>
+            <li><a href="#journey" onClick={() => setIsMobileMenuOpen(false)} className={`block ${activeSection === "journey" ? "text-primary font-semibold" : ""}`}>Journey</a>
+            </li>
+            <li><a href="#services" onClick={() => setIsMobileMenuOpen(false)} className={`block ${activeSection === "services" ? "text-primary font-semibold" : ""}`}>Services</a>
+            </li>
+            <li><a href="#testimonials" onClick={() => setIsMobileMenuOpen(false)} className={`block ${activeSection === "testimonials" ? "text-primary font-semibold" : ""}`}>Testimonials</a>
+            </li>
+            <li><a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className={`block ${activeSection === "contact" ? "text-primary font-semibold" : ""}`}>Contact</a>
+            </li>
           </ul>
         </nav>
       )}

@@ -8,7 +8,7 @@ const Journey = () => {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* LEFT: TEXT */}
         <div ref={ref}
-          className={`container mx-auto max-w-6xl text-left mb-8sm:mb-12 sm:mb-0 transform-gpu will-change-transform will-change-opacity
+          className={`container mx-auto max-w-6xl text-left mb-8sm:mb-12 sm:mb-0 transform-gpu will-change-transform will-change-opacity  
           transition-opacity transition-transform duration-700 ease-out
           ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
